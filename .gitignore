@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+yarn.lock
 config.js
 dist_electron
 dist_wechaty
