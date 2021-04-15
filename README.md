@@ -1,5 +1,26 @@
 # wechaty 结合 electron
 
+> Give a clear and concise description of what the bug is.
+
+- 在 electron 的主进程构建 Wechaty 会报错
+- webpack 打包 wechaty 也会报错
+
+> What is your wechaty version?
+
+    "wechaty": "^0.60.3",
+
+> Which puppet are you using for wechaty? (puppeteer/padlocal/service...)
+
+    wechaty-puppet-service  # 企业微信
+
+> What is your node version? (run `node --version`)
+
+    v14.15.4
+
+> What os are you using
+
+    Windows 10
+
 ## Provide Your Network Information
 1. Where is the location of your server? (i.e. City, or In/Out China)
 
@@ -11,7 +32,7 @@
 
 我测试了四种情况, 有三种失败了
 
-[实例代码](https://github.com/Codingxiaoshi/electron-wechaty)
+[重现错误的实例-code](https://github.com/Codingxiaoshi/electron-wechaty)
 
 - [成功] 单独启动 wechaty
 - [失败] [启动 electron 应用, 在主进程中构建 wechaty](https://github.com/Codingxiaoshi/electron-wechaty/blob/main/electron-main.js)
@@ -19,15 +40,26 @@
 - [失败] [webpack 打包 wechaty.js 时报错, 打包后报错. 错误中提到了需要这两个包, ("bufferutil", "utf-8-validate")
     但即便是安装了打包过程中也会有警告, 并且打包后的代码也跑步起来](https://github.com/Codingxiaoshi/electron-wechaty/blob/main/webpack.config.wechaty.js)
 
+
 ## Actual behavior
-在 electron 主进程中不能正常启动, 但应该可以正常启动
+
+- 在 electron 主进程中不能构建 Wechaty, 但应该可以正常启动
+- webpack 打包 electron 主进程 + Wechaty 时也会报错
+
+## Expected behavior
+
+- 启动开发环境 electron + wechaty 不会报错, 并且控制台可以打印二维码
+- webpack 编译 electron 主进程代码 + wechaty 不会报错
+
 
 ## Steps to reproduce the behavior (and fixes, if any)
+
+进入 electron-wechaty 目录
 
 #### 启动 electron 应用, 在主进程中构建 wechaty
 
 ```
-$ yarn dev:nodejs
+$ yarn dev:electron
 ```
 
 ```
