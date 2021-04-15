@@ -11,7 +11,7 @@
 
 我测试了四种情况, 有三种失败了
 
-template
+[实例代码](https://github.com/Codingxiaoshi/electron-wechaty)
 
 - [成功] 单独启动 wechaty
 - [失败] 启动 electron 应用, 在主进程中构建 wechaty
