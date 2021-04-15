@@ -1,4 +1,4 @@
-# README
+# wechaty 结合 electron
 
 ## Provide Your Network Information
 1. Where is the location of your server? (i.e. City, or In/Out China)
@@ -14,18 +14,22 @@
 [实例代码](https://github.com/Codingxiaoshi/electron-wechaty)
 
 - [成功] 单独启动 wechaty
-- [失败] 启动 electron 应用, 在主进程中构建 wechaty
-- [失败] 用 webpack 打包 wechaty + electron 主进程代码
-- [失败] webpack 打包 wechaty.js 时报错, 打包后报错. 错误中提到了需要这两个包, ("bufferutil", "utf-8-validate")
-    但即便是安装了打包过程中也会有警告, 并且打包后的代码也跑步起来
+- [失败] [启动 electron 应用, 在主进程中构建 wechaty](https://github.com/Codingxiaoshi/electron-wechaty/blob/main/electron-main.js)
+- [失败] [用 webpack 打包 wechaty + electron 主进程代码](https://github.com/Codingxiaoshi/electron-wechaty/blob/main/webpack.config.electron.js)
+- [失败] [webpack 打包 wechaty.js 时报错, 打包后报错. 错误中提到了需要这两个包, ("bufferutil", "utf-8-validate")
+    但即便是安装了打包过程中也会有警告, 并且打包后的代码也跑步起来](https://github.com/Codingxiaoshi/electron-wechaty/blob/main/webpack.config.wechaty.js)
 
-## 单独启动 wechaty
+## Actual behavior
+在 electron 主进程中不能正常启动, 但应该可以正常启动
+
+## Steps to reproduce the behavior (and fixes, if any)
+
+#### 启动 electron 应用, 在主进程中构建 wechaty
+
+```
 $ yarn dev:nodejs
 ```
-可以正常启动
-```
-## 启动 electron 应用, 在主进程中构建 wechaty
-$ yarn dev:nodejs
+
 ```
 λ yarn dev:electron
 yarn run v1.22.10
@@ -49,8 +53,10 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-## 用 webpack 打包 wechaty + electron 主进程代码
+#### 用 webpack 打包 wechaty + electron 主进程代码
+```
 $  yarn build:electron
+```
 
 ```
 $ yarn dev:electron
@@ -76,8 +82,10 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-## webpack 打包 wechaty.js 时报错
+#### webpack 打包 wechaty.js 时报错
+```
 $  yarn build:nodejs
+```
 
 ```
 λ yarn build:nodejs
