@@ -63,24 +63,223 @@ $ yarn dev:electron
 ```
 
 ```
-λ yarn dev:electron
+λ yarndev:electron
 yarn run v1.22.10
 $ electron electron-main.js
 
-create bot
-(node:12892) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
-10:16:08 ERR PuppetWeChatBridge start() exception: Error: Could not find expected browser (chrome) locally. Run `npm install` to download the correct Chromium revision (848005).
-10:16:08 ERR PuppetWeChat initBridge() exception: Could not find expected browser (chrome) locally. Run `npm install` to download the correct Chromium revision (848005).
-10:16:08 ERR PuppetWeChat initBridge() this.bridge.stop() rejection: Error: no page
-10:16:08 ERR PuppetWeChat start() exception: Error
-Error
-    at PuppetWeChat.<anonymous> (C:\sxl\test\electron-wechaty\node_modules\wechaty\dist\src\wechaty.js:271:44)
-    at PuppetWeChat.emit (events.js:315:20)
-    at PuppetWeChat.EventEmitter.emit (domain.js:483:12)
-    at PuppetWeChat.start (C:\sxl\test\electron-wechaty\node_modules\wechaty-puppet-wechat\dist\src\puppet-wechat.js:105:18)
-    at async Wechaty.start (C:\sxl\test\electron-wechaty\node_modules\wechaty\dist\src\wechaty.js:478:13)
-10:16:08 ERR Wechaty start() exception:
-鍒濆鍖栧け璐? Error.
+App threw an error during load
+Error: Failed to load gRPC binary module because it was not installed for the current system
+Expected directory: electron-v11.1-win32-x64-unknown
+Found: [node-v83-win32-x64-unknown]
+This problem can often be fixed by running "npm rebuild" on the current system
+Original error: Cannot find module 'C:\sxl\project\electron-wechaty\node_modules\grpc\src\node\extension_binary\electron-v11.1-win32-x64-unknown\grpc_node.node'
+Require stack:
+- C:\sxl\project\electron-wechaty\node_modules\grpc\src\grpc_extension.js
+- C:\sxl\project\electron-wechaty\node_modules\grpc\src\client_interceptors.js
+- C:\sxl\project\electron-wechaty\node_modules\grpc\src\client.js
+- C:\sxl\project\electron-wechaty\node_modules\grpc\index.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\client\puppet-service.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\mod.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\io-client.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\mod.js
+- C:\sxl\project\electron-wechaty\electron-main.js
+- C:\sxl\project\electron-wechaty\node_modules\electron\dist\resources\default_app.asar\main.js
+-
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\src\grpc_extension.js:53:17)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\src\client_interceptors.js:144:12)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\src\client.js:35:27)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\index.js:27:14)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\client\puppet-service.js:9:32)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\mod.js:4:24)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\io-client.js:28:34)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\mod.js:50:19)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\electron-main.js:6:21)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at loadApplicationPackage (C:\sxl\project\electron-wechaty\node_modules\electron\dist\resources\default_app.asar\main.js:110:16)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\electron\dist\resources\default_app.asar\main.js:222:9)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Object.<anonymous> (electron/js2c/browser_init.js:185:3510)
+    at Object../lib/browser/init.ts (electron/js2c/browser_init.js:185:3714)
+    at __webpack_require__ (electron/js2c/browser_init.js:1:128)
+    at electron/js2c/browser_init.js:1:1200
+    at electron/js2c/browser_init.js:1:1267
+    at NativeModule.compileForInternalLoader (internal/bootstrap/loaders.js:277:7)
+    at NativeModule.compileForPublicLoader (internal/bootstrap/loaders.js:219:10)
+    at loadNativeModule (internal/modules/cjs/helpers.js:24:9)
+    at Module._load (internal/modules/cjs/loader.js:856:15)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+Error: Failed to load gRPC binary module because it was not installed for the current system
+Expected directory: electron-v11.1-win32-x64-unknown
+Found: [node-v83-win32-x64-unknown]
+This problem can often be fixed by running "npm rebuild" on the current system
+Original error: Cannot find module 'C:\sxl\project\electron-wechaty\node_modules\grpc\src\node\extension_binary\electron-v11.1-win32-x64-unknown\grpc_node.node'
+Require stack:
+- C:\sxl\project\electron-wechaty\node_modules\grpc\src\grpc_extension.js
+- C:\sxl\project\electron-wechaty\node_modules\grpc\src\client_interceptors.js
+- C:\sxl\project\electron-wechaty\node_modules\grpc\src\client.js
+- C:\sxl\project\electron-wechaty\node_modules\grpc\index.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\client\puppet-service.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\mod.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\io-client.js
+- C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\mod.js
+- C:\sxl\project\electron-wechaty\electron-main.js
+- C:\sxl\project\electron-wechaty\node_modules\electron\dist\resources\default_app.asar\main.js
+-
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\src\grpc_extension.js:53:17)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\src\client_interceptors.js:144:12)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\src\client.js:35:27)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\grpc\index.js:27:14)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\client\puppet-service.js:9:32)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty-puppet-service\dist\src\mod.js:4:24)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\io-client.js:28:34)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\wechaty\dist\src\mod.js:50:19)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Module.require (internal/modules/cjs/loader.js:1032:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\electron-main.js:6:21)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at loadApplicationPackage (C:\sxl\project\electron-wechaty\node_modules\electron\dist\resources\default_app.asar\main.js:110:16)
+    at Object.<anonymous> (C:\sxl\project\electron-wechaty\node_modules\electron\dist\resources\default_app.asar\main.js:222:9)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1173:10)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Object.<anonymous> (electron/js2c/browser_init.js:185:3510)
+    at Object../lib/browser/init.ts (electron/js2c/browser_init.js:185:3714)
+    at __webpack_require__ (electron/js2c/browser_init.js:1:128)
+    at electron/js2c/browser_init.js:1:1200
+    at electron/js2c/browser_init.js:1:1267
+    at NativeModule.compileForInternalLoader (internal/bootstrap/loaders.js:277:7)
+    at NativeModule.compileForPublicLoader (internal/bootstrap/loaders.js:219:10)
+    at loadNativeModule (internal/modules/cjs/helpers.js:24:9)
+    at Module._load (internal/modules/cjs/loader.js:856:15)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12710)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```

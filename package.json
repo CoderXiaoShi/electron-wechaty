@@ -17,8 +17,6 @@
     "qrcode-terminal": "^0.12.0",
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0",
-    "wechaty": "^0.60.3",
-    "wechaty-puppet": "^0.34.3",
-    "wechaty-puppet-wechat": "^0.28.0"
+    "wechaty": "0.57.17"
   }
 }
